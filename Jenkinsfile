@@ -14,5 +14,11 @@ pipeline {
                 sh 'mvn package -DskipTests'
             }
         }
+
+        stage('Install') {
+            steps {
+                sh 'mvn install -DskipTests'
+            }
+        }
     }
 }
